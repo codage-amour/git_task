@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="load.css">
+</head>
+<body>
+    <img class='logo' src='https://bitemycoin.com/wp-content/uploads/2018/06/GitHub-Logo.png'></img>
+    <p class='title'>Github Repositories Listing Page</p>
+    <div class='searchdiv'>
+        <h1>Enter Username</h1>
+        <form>
+            <input
+                type="text"
+                id="usernameInput"
+                placeholder="Enter GitHub username"
+            />
+        </form>
+        <button class='search' onclick="handleClick()">
+            Search
+        </button>
+    </div>
+    <div class='loading' style='display: none;'>
+        <div class='cat-animation'>
+          <div class='cat'>
+            <div class='ear ear--left'></div>
+            <div class='ear ear--right'></div>
+            <div class='face'>
+              <div class='eye eye--left'>
+                <div class='eye-pupil'></div>
+              </div>
+              <div class='eye eye--right'>
+                <div class='eye-pupil'></div>
+              </div>
+              <div class='muzzle'></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="dp"></div>
+    <div id="userDataContainer"> </div>
+    <div id="reposDataContainer"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+    <script src="index.js"></script>
+</body>
+</html>

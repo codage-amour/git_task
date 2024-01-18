@@ -1,0 +1,59 @@
+*{
+    color: white;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+.logo{
+    height: 5vw;
+    width: 5vw;
+    margin-left: 1vw;
+}
+.title{   
+    text-align: center;
+    text-decoration: underline;
+    font-size: 4vw;
+    margin-top: 0%;
+    position: relative;
+    bottom:5.5vw;
+}
+h1{
+    font-size: 2vw;
+}
+input{
+    color: black;
+}
+.search{
+    color: black;
+}
+.searchdiv{
+    text-align: center;
+    position: relative;
+    bottom:8vw;
+}
+.searchdiv>form>input{
+    height: 4vh;
+    width:30vw;
+    border-radius: 1vw;
+    text-align: center;
+    font-size: 1.5vw;
+}
+.searchdiv>button{
+    background-color: white;
+    border:3px solid azure;
+    border-radius: 2vw;
+    height: 2vw;
+    font-size: 1.3vw;
+   padding-bottom: 1.3vw;
+}
+.loading{
+    text-align: center;
+}
+.cat-animation {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
