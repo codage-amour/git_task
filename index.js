@@ -1,6 +1,7 @@
 async function handleClick() {
     const username = document.getElementById('usernameInput').value;
     const loadingDiv = document.querySelector('.loading');
+    const arr = document.querySelector('.arrow');
     const profilePictureDiv = document.getElementById('dp');
 
     try {
@@ -12,15 +13,13 @@ async function handleClick() {
         const reposResponse = await axios.get(`https://api.github.com/users/${username}/repos`);
         const reposData = reposResponse.data;
         profilePictureDiv.innerHTML = `
-        <img src="${userData.avatar_url}" alt="${username}'s Profile Picture">
+        <img src="${userData.avatar_url}" alt="${username}'s Profile Picture" style="border-radius:50%; height:30vw; width:30vw;">
     `;
-
         
     document.getElementById('userDataContainer').innerHTML = `
-    <h2>User Data:</h2>
-    <p>Bio: ${userData.bio || 'N/A'}</p>
     <p>Name: ${userData.name || 'N/A'}</p>
     <p>Username: ${userData.login || 'N/A'}</p>
+    <p>Bio: ${userData.bio || 'N/A'}</p>
     <p>Location: ${userData.location || 'N/A'}</p>
     <p>Blog: ${userData.blog || 'N/A'}</p>
     <p>Twitter: ${userData.twitter_username || 'N/A'}</p>
@@ -41,7 +40,7 @@ ${repoDetailsHTML}
 }  catch (error) {
         console.error('Error fetching data from GitHub API:', error);
     } finally {
-        loadingDiv.style.display = 'none'; 
+        loadingDiv.style.display = 'none';
+        arr.style.display="block";
     }
-}
-
+} 
